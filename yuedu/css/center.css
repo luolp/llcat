@@ -1,0 +1,35 @@
+.block{
+    margin: 0 auto;width: 720px;background-color: #FAF7ED;
+}
+.view_block_1{
+    height: 520px;
+}
+.item_top{  padding: 10px 0;  border-bottom: 1px solid #eeeeee;  }
+.top_categoryname{font-size: 16px;font-family: 'Microsoft YaHei', arial, sans-serif;color: #262b86}
+/* ���������� */
+#bar{
+    height: 4px;background-color: rgba(0,184,212,0.3);
+}
+#bar_val{
+    height: 4px;background-color: #00B8D4;
+    transition-property: width;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+/* �ײ�����ҳ��ť */
+#next_page,#previous_page{
+    float:right;padding:5px;border: 1px solid #d4d4d4;background-color: #FAF7ED;
+    cursor: pointer;font-weight: bold;
+}
+#next_page:hover,#previous_page:hover{
+    border-color: #3072b3;
+    background-color: #3c8dde;
+    color: #ffffff;
+}
+.no_page{
+    color: #d4d4d4;
+}
+
+#TextContent{
+        text-indent: 2em;
+    }

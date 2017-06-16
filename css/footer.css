@@ -1,0 +1,14 @@
+    #footer{
+        line-height: 45px;
+        text-align: center;
+        border-top: 1px solid #ededed;
+    }
+#footer a{
+        color:#474747;
+    }
+#footer_infolist{
+margin: 0 8px;
+}
+#footer_infolist li{
+display: inline;
+}

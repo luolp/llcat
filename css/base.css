@@ -1,0 +1,17 @@
+body{
+    font-family: "Microsoft YaHei", Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #d6e9c6;
+    cursor: pointer;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}

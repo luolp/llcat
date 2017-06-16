@@ -1,0 +1,21 @@
+<div id="left">
+    <h3><strong>目录</strong></h3>
+    <div id="chapterlink">
+        <?
+        require_once "DBUtil.php";
+        $sql="select author from author where id={$authorid}";
+        $rett=mysql_query($sql);
+        $roww=mysql_fetch_assoc($rett);
+        $authorname=$roww['author'];
+        
+        $sql="select * from book where authorid={$authorid} and categoryid=2";
+        $ret=mysql_query($sql);
+        echo "<ul>";
+        echo "<p>{$authorname}散文选</p>";
+        while($row=mysql_fetch_assoc($ret)){
+        echo "<li><a href='".$row['no'].".html'>".$row['bookname']."</a></li>";
+        }
+        echo "</ul>";
+        ?>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^(.*)/(\d+)/(\d+).html$ yuedu.php?book=$2&chapter=$3
+RewriteRule ^(xddwx|wgwx|dpxs|gdwx|qt|100)/(\d+).html$ yuedu.php?book=$2
+RewriteRule ^(swsb)/(\d+).html$ swsbyd.php?book=$2
+RewriteRule ^作者专区$ authorlist.php

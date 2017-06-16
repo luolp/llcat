@@ -1,0 +1,18 @@
+<div id="left">
+    <h3><strong>目录</strong></h3>
+    <div id="chapterlink">
+<?
+    $no=0;
+    for($i=0;$i<count($ul);$i++){
+        echo "<ul>";
+        if(count($ul)>1) echo "<p>{$ul[$i]}</p>";
+        for($j=0;$j<count($li[$i]);$j++){
+        $no++;
+        echo "<li><a href='javascript:' onclick=\"getcontent(this,'".$dir."','".$bookno."','".$no."')\">{$li[$i][$j]}</a></li>";
+        }
+        echo "</ul>";
+    }
+?>
+
+    </div>
+</div>

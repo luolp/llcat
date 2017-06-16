@@ -1,0 +1,38 @@
+<div class="block" style="margin-top: 0px;">
+    <!-- 阅读进度条开始 -->
+    <div id="bar">
+        <div id="bar_val"></div>
+    </div>
+    <!-- 阅读进度条结束 -->
+    <div style="border: 1px solid #dcdcdc;border-top: none;padding: 0px 20px">
+
+        <div class="item_top">
+            <p>
+                <span class="top_categoryname"><?=$bookname?>&nbsp;&nbsp;</span><span id="top_chaptername" style="float: right"></span>
+            </p>
+        </div>
+        <div class="view_block_1" id="view_block" style="border: 0px solid #dcdcdc;margin: 10px 0;overflow: hidden">
+            <div id="content" style="margin-top: 0px;text-align:justify;text-justify:distribute;line-height: 26px;font-family: 'Microsoft YaHei';color: #333333">
+                <?
+                    $filename="../txt/".$dir."/".$bookno."_1.txt";
+                    $string=file_get_contents($filename);
+                    $encode = mb_detect_encoding($string, array("GB2312","ASCII","UTF-8","GBK"));
+                    if($encode!="UTF-8"){
+                    $string=iconv($encode,"UTF-8",$string);
+                    }
+                    $string=nl2br($string);
+                    $string=preg_replace("/(<br \/>\s*){3,}/","<br />",$string);
+                    echo $string;
+                ?>
+            </div>
+        </div>
+    </div>
+    <!-- 上一页下一页按钮模块开始 -->
+    <div id="change_page_block" style="margin-top: 10px">
+        <div id="huanye" style="float: right;margin-right: 20px">
+            <div onclick="next_page_f()" class="next_page" id="next_page" style="border-top-right-radius: 6px;border-bottom-right-radius: 6px">下一页</div>
+            <div onclick="previous_page_f()" class="previous_page" id="previous_page" style="border-top-left-radius: 6px;border-bottom-left-radius: 6px">上一页</div>
+        </div>
+    </div>
+    <!-- 上一页下一页按钮模块结束 -->
+</div>
